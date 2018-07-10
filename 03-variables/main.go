@@ -17,7 +17,7 @@ func main() {
 	// can also omit "= *value*" to set it to the types "zero value"
 	// while you can declare the type while assigning, golang reccomends
 	// omitting type because it will be inferred
-	var d int = 2
+	var d = 2
 	var e = "hey"
 	var f bool
 	// %v prints the value, or zero value if none is assigned
