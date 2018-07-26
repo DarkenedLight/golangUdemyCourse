@@ -22,6 +22,7 @@ func main() {
 	}
 
 	//golang doesn't like when you declare funcs inside of funcs
+	//only way to have a func inside a func is with a func expression
 	// func foo() int {
 	// 	x++
 	// 	return x
@@ -29,11 +30,27 @@ func main() {
 
 	fmt.Println(foo())
 
+	fmt.Println("----------")
+
 	//foo2 is assinged the anonymous fun that is defined by the return
 	//statemnt in func wrapper
 	var foo2 = wrapper()
 	fmt.Println(foo2())
 	fmt.Println(foo2())
+
+	fmt.Println("----------")
+
+	//the variable x incremented here is in a different scope that foo2 and is
+	//reset to 0 when wrapper is called
+	var foo3 = wrapper()
+	fmt.Println(foo3())
+	fmt.Println(foo3())
+
+	fmt.Println("----------")
+
+	//these both print 3 proving that they are incrementing independently
+	fmt.Println(foo2())
+	fmt.Println(foo3())
 }
 
 //anonymous funcs are funcs without a name, like in a fun expression
