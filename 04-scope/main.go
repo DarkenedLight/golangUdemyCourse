@@ -10,10 +10,10 @@ var x = 10
 func main() {
 	//you can access x here since it is package level
 	fmt.Println(x)
-	//y is declared inside a block, { }, so it is only accessible in fun main
+	//y is declared inside a block, { }, so it is only accessible in func main
 	var y = "ten"
 	fmt.Println(y)
-}
+} //scope of y ends here
 
 //func foo starts with a lower case letter, it is not visible outside the package
 //a func call "Foo" would be visible outside package main
